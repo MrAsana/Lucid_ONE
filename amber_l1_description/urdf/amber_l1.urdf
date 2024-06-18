@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="amber_l1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-8.47921832188064E-05 0.000151766084751043 0.0396217797415616"
+        rpy="0 0 0" />
+      <mass
+        value="0.137082937097788" />
+      <inertia
+        ixx="0.00008015"
+        ixy="-0.00000001"
+        ixz="0.00000031"
+        iyy="0.00009195"
+        iyz="0.00000097"
+        izz="0.00006813" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="one_Link">
+    <inertial>
+      <origin
+        xyz="-7.2838666370467E-05 0.000305826181508822 0.0461392337140137"
+        rpy="0 0 0" />
+      <mass
+        value="0.160380851428424" />
+      <inertia
+        ixx="0.00010004"
+        ixy="0.00000040"
+        ixz="-0.00000007"
+        iyy="0.00008274"
+        iyz="-0.00000225"
+        izz="0.00008179" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/one_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/one_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.07"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="one_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.4435"
+      upper="2.4435"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="two_Link">
+    <inertial>
+      <origin
+        xyz="-6.2847937761713E-05 -0.0712735300451626 0.0103290334654566"
+        rpy="0 0 0" />
+      <mass
+        value="0.186352477139439" />
+      <inertia
+        ixx="0.00021458"
+        ixy="-0.00000029"
+        ixz="0.00000011"
+        iyy="0.00010223"
+        iyz="0.00003893"
+        izz="0.00018260" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/two_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/two_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.053"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="one_Link" />
+    <child
+      link="two_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.3213"
+      upper="2.3213"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="three_Link">
+    <inertial>
+      <origin
+        xyz="-6.96298213181922E-05 -0.000305885497154144 0.0460778704823572"
+        rpy="0 0 0" />
+      <mass
+        value="0.160380851428436" />
+      <inertia
+        ixx="0.00009991"
+        ixy="-0.00000041"
+        ixz="-0.00000010"
+        iyy="0.00008261"
+        iyz="0.00000201"
+        izz="0.00008179" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/three_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/three_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0 -0.104 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="two_Link" />
+    <child
+      link="three_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.2863"
+      upper="2.2863"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="four_Link">
+    <inertial>
+      <origin
+        xyz="-5.95083364920892E-05 0.0712735300444526 0.0103818446085666"
+        rpy="0 0 0" />
+      <mass
+        value="0.186352477139436" />
+      <inertia
+        ixx="0.00021437"
+        ixy="0.00000029"
+        ixz="0.00000014"
+        iyy="0.00010202"
+        iyz="-0.00003907"
+        izz="0.00018260" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/four_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/four_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0 0 0.053"
+      rpy="1.5708 0 0" />
+    <parent
+      link="three_Link" />
+    <child
+      link="four_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.2863"
+      upper="2.2863"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="five_Link">
+    <inertial>
+      <origin
+        xyz="-7.25404851468109E-05 0.000305885498298983 0.0461392337140121"
+        rpy="0 0 0" />
+      <mass
+        value="0.16038085142841" />
+      <inertia
+        ixx="0.00010004"
+        ixy="0.00000040"
+        ixz="-0.00000007"
+        iyy="0.00008274"
+        iyz="-0.00000225"
+        izz="0.00008179" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/five_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/five_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="0 0.104 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="four_Link" />
+    <child
+      link="five_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.2863"
+      upper="2.2863"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="six_Link">
+    <inertial>
+      <origin
+        xyz="-6.3234553025939E-05 -0.0710469470127731 0.0105353927578225"
+        rpy="0 0 0" />
+      <mass
+        value="0.185213120483254" />
+      <inertia
+        ixx="0.00021173"
+        ixy="-0.00000029"
+        ixz="0.00000012"
+        iyy="0.00010090"
+        iyz="0.00003751"
+        izz="0.00018102" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/six_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/six_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="revolute">
+    <origin
+      xyz="0 0 0.053"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="five_Link" />
+    <child
+      link="six_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.2863"
+      upper="2.2863"
+      effort="100"
+      velocity="10" />
+  </joint>
+  <link
+    name="seven_Link">
+    <inertial>
+      <origin
+        xyz="3.87308981628677E-06 -2.54409993840369E-06 -0.0105687813394271"
+        rpy="0 0 0" />
+      <mass
+        value="0.0448225473770891" />
+      <inertia
+        ixx="0.00001019"
+        ixy="0.00000000"
+        ixz="0.00000000"
+        iyy="0.00001020"
+        iyz="0.00000000"
+        izz="0.00001696" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/seven_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://amber_l1_description/meshes/seven_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint7"
+    type="revolute">
+    <origin
+      xyz="0 -0.1296 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="six_Link" />
+    <child
+      link="seven_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-314"
+      upper="314"
+      effort="100"
+      velocity="10" />
+  </joint>
+</robot>
